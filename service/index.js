@@ -26,7 +26,6 @@ repository.connect({
   port: config.db.port
 }).then((repo) => {
   console.log("Connected. Starting server...");
-
   return server.start({
     port: config.port,
     repository: repo

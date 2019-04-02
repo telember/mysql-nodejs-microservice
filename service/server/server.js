@@ -14,9 +14,10 @@ module.exports.start = (options) => {
     //  Create the app, add some logging.
     var app = express();
     app.use(morgan('dev'));
-
+    
     //  Add the APIs to the app.
     require('../api/users')(app, options);
+    
 
     //  Start the app, creating a running server which we return.
     var server = app.listen(options.port, () => {

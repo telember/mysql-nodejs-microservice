@@ -13,6 +13,11 @@ class Repository {
     this.connection = connection;
   }
 
+  /// Tanant
+  
+
+
+  /// User
   getUsers() {
     return new Promise((resolve, reject) => {
 

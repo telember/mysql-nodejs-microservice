@@ -1,7 +1,8 @@
 version: '3.2'
 services:
-  users-service:
-    build: ./users-service
+  service:
+    build: ./service
+    restart: always
     ports:
      - "8123:8123"
     depends_on:
@@ -9,4 +10,7 @@ services:
     environment:
      - DATABASE_HOST=db
   db:
-    build: ./test-database
+    build: ./database
+    restart: always
+    volumes:
+      - ./database/data/:/var/lib/mysql
